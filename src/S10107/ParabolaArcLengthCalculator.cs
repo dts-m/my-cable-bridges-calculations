@@ -1,13 +1,10 @@
 using System;
+using static S10107.ParabolaDefinitions;
 
 namespace S10107;
 
 public static class ParabolaArcLengthCalculator
 {
-    private const double A = 0.000557399;
-    private const double B = 0.0768503;
-    private const double C = -3.04935;
-
     public static double ArcLengthFromPoints((double x, double y) p1, (double x, double y) p2, double tolerance = 1e-6)
     {
         ValidatePointOnCurve(p1, tolerance, nameof(p1));
